@@ -221,3 +221,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Secrets (clé Tavily, etc.)
+.env
+
+# Bases vectorielles et mémoires générées
+chroma_db/
+*.sqlite
+.langgraph_api/
