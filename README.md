@@ -14,7 +14,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 
 ### B. LangGraph
 - [X] Étape 6 : Bases de LangGraph
-- [ ] Étape 7 : Chatbot Agentic RAG
+- [X] Étape 7 : Chatbot Agentic RAG
 - [ ] Étape 8 : LangGraph Studio
 - [ ] Étape 9 : Interface Streamlit
 
