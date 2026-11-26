@@ -10,7 +10,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 - [X] Étape 2 : Tools personnalisés
 - [X] Étape 3 : Tools prédéfinis (DuckDuckGo, Tavily, PythonREPL)
 - [X] Étape 4 : Middlewares
-- [ ] Étape 5 : Chatbot RAG agentique
+- [X] Étape 5 : Chatbot RAG agentique
 
 ### B. LangGraph
 - [ ] Étape 6 : Bases de LangGraph
