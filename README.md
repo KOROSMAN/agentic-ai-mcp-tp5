@@ -20,7 +20,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 
 ### C. MCP
 - [X] Étape 10 : Serveur MCP (2 tools) + Inspector
-- [ ] Étape 11 : Agent LangChain client MCP (streamable-http)
+- [X] Étape 11 : Agent LangChain client MCP (streamable-http)
 - [ ] Étape 12 : Agent n8n client MCP
 
 ### D. Synthèse
