@@ -19,7 +19,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 - [X] Étape 9 : Interface Streamlit
 
 ### C. MCP
-- [ ] Étape 10 : Serveur MCP (2 tools) + Inspector
+- [X] Étape 10 : Serveur MCP (2 tools) + Inspector
 - [ ] Étape 11 : Agent LangChain client MCP (streamable-http)
 - [ ] Étape 12 : Agent n8n client MCP
 
@@ -39,3 +39,9 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
     uv run streamlit run app/streamlit_app.py
 
 ![Chatbot Streamlit](captures/streamlit.jpeg)
+
+## Serveur MCP
+    uv run python mcp_server/server.py      # http://localhost:24000/mcp
+
+![Outils dans l'Inspector](captures/inspector_tools.jpg)
+![Appel d'un outil](captures/inspector_run.jpg)
