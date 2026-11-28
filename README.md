@@ -21,7 +21,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 ### C. MCP
 - [X] Étape 10 : Serveur MCP (2 tools) + Inspector
 - [X] Étape 11 : Agent LangChain client MCP (streamable-http)
-- [ ] Étape 12 : Agent n8n client MCP
+- [X] Étape 12 : Agent n8n client MCP
 
 ### D. Synthèse
 - [ ] Étape 13 : SAV multi-agents (orchestrateur, agent documentaire via MCP, agent garantie)
@@ -45,3 +45,10 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 
 ![Outils dans l'Inspector](captures/inspector_tools.jpg)
 ![Appel d'un outil](captures/inspector_run.jpg)
+
+## Agent n8n (client MCP)
+Workflow : `n8n/agent_rh_mcp.json` (à importer dans n8n via *Import from File*).
+Chat Trigger → AI Agent, avec Ollama (qwen3:4b), Simple Memory et MCP Client Tool
+connecté au serveur MCP en streamable-http (`http://127.0.0.1:24000/mcp`).
+
+![Workflow n8n](captures/agentRHN8N.jpg)

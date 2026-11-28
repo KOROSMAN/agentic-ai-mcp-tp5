@@ -1,0 +1,139 @@
+{
+  "name": "AGENT RH MCP",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        0,
+        0
+      ],
+      "id": "89a3cc3a-c7a9-4c17-b5ab-869e22320be7",
+      "name": "When chat message received",
+      "webhookId": "07f8e7c2-83c8-45dd-9b71-05e7065c1262"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Tu es un assistant RH. Utilise les outils disponibles pour répondre. Réponds en français, brièvement."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "0ce0d69c-47f6-43c4-977c-3446e25296cf",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "qwen3:4b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        96,
+        208
+      ],
+      "id": "b7433aae-521f-4815-8091-f5d0ea6307e0",
+      "name": "Ollama Chat Model",
+      "credentials": {
+        "ollamaApi": {
+          "id": "OqbEjs5Rx3gN3YNP",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        240,
+        208
+      ],
+      "id": "8785811d-604b-4000-9706-0e892b3e6a16",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "endpointUrl": "http://127.0.0.1:24000/mcp",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1.4,
+      "position": [
+        384,
+        240
+      ],
+      "id": "d2d32dd2-4381-4361-aad1-6dd12da9407d",
+      "name": "MCP Client"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "d70e5c44-1a0f-401c-bdc1-3603ab9a5801",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e7942c6ae43a9b1e116f2c4b59757640919031b703d6a4741e79dacbf92bcb7e"
+  },
+  "nodeGroups": [],
+  "id": "azQhVk2LLcYU2Uws",
+  "tags": []
+}
