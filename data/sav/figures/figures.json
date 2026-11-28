@@ -1,0 +1,23 @@
+[
+  {
+    "id": "fig1",
+    "fichier": "fig1_pictogrammes.png",
+    "section": "2. Voyant d'état et pictogrammes",
+    "legende": "Figure 1 — Pictogrammes du panneau PX-200",
+    "description": "Tableau des pictogrammes : goutte orange = encre faible avec voyant orange clignotant ; feuille barrée = bourrage papier avec voyant rouge fixe ; triangle jaune avec point d'exclamation = erreur matérielle avec voyant rouge clignotant."
+  },
+  {
+    "id": "fig2",
+    "fichier": "fig2_cartouche.png",
+    "section": "4. Remplacement d'une cartouche d'encre",
+    "legende": "Figure 2 — Remplacement d'une cartouche",
+    "description": "Schéma du chariot ouvert : une cartouche bleue est insérée par le haut jusqu'au déclic."
+  },
+  {
+    "id": "fig3",
+    "fichier": "fig3_bourrage.png",
+    "section": "5. Résolution d'un bourrage papier",
+    "legende": "Figure 3 — Retirer une feuille coincée",
+    "description": "Schéma de l'imprimante avec une feuille coincée que l'on tire vers le haut, à deux mains."
+  }
+]

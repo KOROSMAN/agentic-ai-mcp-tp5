@@ -24,7 +24,7 @@ LLM local : Ollama (qwen3:4b, qwen3:1.7b) · Embeddings : nomic-embed-text
 - [X] Étape 12 : Agent n8n client MCP
 
 ### D. Synthèse
-- [ ] Étape 13 : SAV multi-agents (orchestrateur, agent documentaire via MCP, agent garantie)
+- [X] Étape 13 : SAV multi-agents (orchestrateur, agent documentaire via MCP, agent garantie)
 
 ## Installation
     uv sync
